@@ -1,0 +1,63 @@
+GET http://localhost:3003/api/blogs
+
+###
+
+GET http://localhost:3003/api/blogs/65d7b7e5849fbac0f5da11d2
+
+
+###
+GET http://localhost:3003/api/users
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "kiki",
+    "name": "kelsier",
+    "password": "password"
+}
+###
+
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "username": "kiki",
+  "password":"password"
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imtpa2kiLCJpZCI6IjY1ZTY0Mzk4MTc4YWY2YzA5ODgxZmUyNCIsImlhdCI6MTcwOTY3Mzk3OX0.6X-RLjtkwyi6YwVcK_tFO6pCDK_32n7zWZyZScYY03Y
+
+{
+  "title": "The Time of Contempt",
+  "url": "tbd",
+  "likes": 5532
+}
+
+###
+
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "First One",
+  "author": "Izmet Kenjko",
+  "url": "tbd",
+  "likes": 335
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "url": "tbd",
+  "likes": 335
+}
+
+###
+DELETE http://localhost:3003/api/blogs/65e64c675621e96c002d4f03
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imtpa2kiLCJpZCI6IjY1ZTY0Mzk4MTc4YWY2YzA5ODgxZmUyNCIsImlhdCI6MTcwOTU4OTQwN30.5dLEfRgdy2uVSkuwO55GvKF8PlfGDeQi0bWljTn-ECo
